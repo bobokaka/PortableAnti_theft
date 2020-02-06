@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--左侧滑动菜单栏内的具体内容-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textColor="#ffffff">
+
+    <!--android:checkableBehavior="none"-->
+    <group>
+        <item
+            android:id="@+id/nav_shebeiguanli"
+            android:icon="@drawable/baojingshezhi2"
+            android:title="设备管理"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/nav_shiwuzhaohui"
+            android:icon="@drawable/shiwu2"
+            android:title="失物找回"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/nav_yijianbaojing"
+            android:icon="@drawable/baojing2"
+            android:title="一键报警"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/nav_xiaoxitongzhi"
+            android:icon="@drawable/xiaoxi2"
+            android:title="消息通知"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/nav_zaixiankefu"
+            android:icon="@drawable/kefu2"
+            android:title="在线客服"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/nav_guanyuwomen"
+            android:icon="@drawable/guanyuwomen2"
+            android:title="关于我们" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/shezhi2"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_quit"
+            android:icon="@drawable/quit2"
+            android:title="退出登录/关闭" />
+    </group>
+</menu>

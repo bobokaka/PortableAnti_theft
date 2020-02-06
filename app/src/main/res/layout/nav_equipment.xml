@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/bmapView"
+        class="com.baidu.mapapi.map.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape"
+        app:layout_constraintBottom_toBottomOf="@+id/bmapView"
+        app:layout_constraintEnd_toEndOf="@+id/changjing"
+        app:layout_constraintStart_toStartOf="@+id/zhuangtai"
+        app:layout_constraintTop_toBottomOf="@+id/bmapView"
+        app:layout_constraintTop_toTopOf="@+id/bmapView"
+        app:layout_constraintVertical_bias="0.0618" />
+
+    <TextView
+        android:id="@+id/zhuangtai"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="状态"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/dianliang"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/bmapView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/dianliang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="电量"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zhuangtai"
+        app:layout_constraintEnd_toStartOf="@+id/xinhao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zhuangtai"
+        app:layout_constraintTop_toTopOf="@+id/zhuangtai"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/xinhao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="信号"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dianliang"
+        app:layout_constraintEnd_toStartOf="@+id/dingweifangshi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dianliang"
+        app:layout_constraintTop_toTopOf="@+id/dianliang"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/dingweifangshi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="定位方式"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/xinhao"
+        app:layout_constraintEnd_toStartOf="@+id/changjing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/xinhao"
+        app:layout_constraintTop_toTopOf="@+id/xinhao" />
+
+    <TextView
+        android:id="@+id/changjing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="场景"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dingweifangshi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dingweifangshi"
+        app:layout_constraintTop_toTopOf="@+id/dingweifangshi"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/zhuangtai_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:text="良好"
+        android:textColor="#0F8502"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/dianliang"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/zhuangtai"
+        app:layout_constraintTop_toBottomOf="@+id/zhuangtai" />
+
+    <TextView
+        android:id="@+id/dianliang_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="100%"
+        android:textColor="#0F8502"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zhuangtai_text"
+        app:layout_constraintEnd_toStartOf="@+id/xinhao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dianliang"
+        app:layout_constraintTop_toTopOf="@+id/zhuangtai_text" />
+
+    <TextView
+        android:id="@+id/xinhao_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="64%"
+        android:textColor="#0F8502"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dianliang_text"
+        app:layout_constraintEnd_toStartOf="@+id/dingweifangshi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/xinhao"
+        app:layout_constraintTop_toTopOf="@+id/dianliang_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/dingweifangshi_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="GPS定位"
+        android:textColor="#0F8502"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/xinhao_text"
+        app:layout_constraintEnd_toStartOf="@+id/changjing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dingweifangshi"
+        app:layout_constraintTop_toTopOf="@+id/xinhao_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/changjing_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="离家"
+        android:textColor="#0F8502"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dingweifangshi_text"
+        app:layout_constraintEnd_toEndOf="@+id/changjing"
+        app:layout_constraintStart_toStartOf="@+id/changjing"
+        app:layout_constraintTop_toTopOf="@+id/dingweifangshi_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--滚动栏里面有设备信息-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmapView">
+
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/devicebar1"
+                layout="@layout/fragment_device_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <include
+                android:id="@+id/devicebar2"
+                layout="@layout/fragment_device_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/devicebar1" />
+
+            <include
+                android:id="@+id/devicebar3"
+                layout="@layout/fragment_device_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/devicebar2" />
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

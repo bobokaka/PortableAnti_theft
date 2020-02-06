@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimarySR">#00000000</color>
+
+    <!--电量标题栏-->
+    <color name="colorPrimaryDark">#8A8A8A</color>
+    <color name="colorPrimaryDarkSR">#00000000</color>
+    <!--控件按钮的颜色，相当于强调-->
+    <color name="colorAccent">#2AA515</color>
+    <color name="colorAccentSR">#00000000</color>
+    <!--返回键栏颜色-->
+    <color name="navigationBarColor">#E4E4E4</color>
+    <color name="navigationBarColorSR">#E4E4E4</color>
+    <!--主界面颜色-->
+    <color name="windowBackground">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#888888</color>
+    <color name="red">#ff0000</color>
+    <color name="orange_light">#ffffdd</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#0099ff</color>
+    <color name="green">#00ff99</color>
+    <color name="green_u">#2AA515</color>
+    <color name="green_nu">#852AA515</color>
+    <color name="orange">#F9CC12</color>
+    <color name="blue_light">#aaaaff</color>
+    <color name="blue_dark">#1983d1</color>
+    <color name="blue_black">#1673b8</color>
+    <color name="tab_text_selected">#0084e8</color>
+    <color name="tab_text_normal">#7597b3</color>
+    <color name="blue_usual">#2283E2</color>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <item android:state_pressed="true">
+        <shape>
+            <!--圆角-->
+            <corners android:radius="25dp" />
+            <!--边框线-->
+            <stroke android:width="2dp" android:color="@color/white" />
+            <!--背景颜色填充-->
+            <solid android:width="3dp" android:color="@color/green_nu" android:dashGap="0dp" />
+            <!--<gradient-->
+            <!--android:endColor="@color/green_nu"-->
+            <!--android:startColor="@color/green_u"-->
+            <!--android:type="linear" />-->
+            <!--<padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />-->
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <!--圆角-->
+            <corners android:radius="25dp" />
+            <!--边框线-->
+            <stroke android:width="2dp" android:color="@color/white" />
+            <!--背景颜色填充-->
+            <solid android:width="3dp" android:color="@color/white" android:dashGap="0dp" />
+
+            <gradient
+                android:endColor="#BDBDBD"
+                android:startColor="#BDBDBD"
+                android:centerColor="#BDBDBD"
+                android:type="linear" />
+            <!--"linear"  : 线性渐变. 大概为 y= ax+b;-->
+            <!--"radial" : 圆形渐变,起始颜色从cenralX,centralY 点开始-->
+            <!--"sweep" : 梯度渐变-->
+            <!--android:endColor="@color/green_nu"-->
+            <!--android:startColor="@color/green_nu"-->
+            <!--android:centerColor="@color/green_u"-->
+            <!--<padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />-->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/shape2"
+    android:padding="10dp">
+
+    <!--android:elevation设置卡片的高度，会有阴影的-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape3"
+        android:elevation="10dp"
+        android:padding="3dp"
+        android:src="@drawable/morentouxiang0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/icon_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已绑定设备：无"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/icon_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/icon_image"
+        app:layout_constraintTop_toBottomOf="@+id/icon_image" />
+
+    <Button
+        android:id="@+id/icon_button_weidenglu"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/shape4"
+        android:text="未登录"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_image"
+        app:layout_constraintDimensionRatio="10:4"
+        app:layout_constraintStart_toEndOf="@+id/icon_image"
+        app:layout_constraintTop_toTopOf="@+id/icon_image" />
+
+    <TextView
+        android:id="@+id/icon_text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_image"
+        app:layout_constraintStart_toEndOf="@+id/icon_image"
+        app:layout_constraintTop_toTopOf="@+id/icon_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

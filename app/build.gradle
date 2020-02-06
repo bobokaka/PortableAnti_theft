@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.portableanti_theft"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+//短信验证码配置
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2a75455d0de66"
+    appSecret "1457bfcc588b03d4616d25adb69e8db1"
+    SMSSDK {}
+}
+//图片高效加载Gradle配置
+repositories {
+    mavenCentral()
+    google()
+}
+
+//    百度地图配置
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    implementation files('libs/BaiduLBS_Android.jar')
+    //RecyclerView使用依赖包
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    implementation 'com.github.hotchemi:permissionsdispatcher:3.1.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+
+    //滑动侧边栏支持依赖库
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    //图片高效加载Gradle支持依赖库
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'androidx.cardview:cardview:1.0.0-beta01'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //Butter Knife依赖库，专注于Android系统的View注入框架，依赖性强，api28只能匹配9.0
+    //可以减少大量的findViewById以及setOnClickListener代码，可视化一键生成。
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //okhttp依赖库
+    implementation 'com.squareup.okhttp3:okhttp:3.13.1'
+    //volley依赖库
+    //    implementation 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    //litepal数据库声明
+    implementation 'org.litepal.android:java:3.0.0'
+    //谷歌gson依赖库
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //EventBus依赖库
+    implementation 'org.greenrobot:eventbus:3.1.1'
+}
